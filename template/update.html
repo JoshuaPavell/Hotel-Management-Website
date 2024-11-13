@@ -1,0 +1,66 @@
+<!-- Modal -->
+<div class="modal fade" id="update{{row[0]}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+              <div class="row">
+                <form action="{{url_for('update')}}" method="POST">
+                    <div class="col text-center">
+                      <div class="mb-3">
+                        <label for="nama" class="form-label">Booking Name</label>
+                        <input type="hidden" class="form-control" id="id" name="id" value="{{row[0]}}">
+                        <input type="text" class="form-control" id="nama" placeholder="Please enter your name" name="nama" 
+                        autocomplete="off" value="{{row[1]}}" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Please enter your email" name="email" autocomplete="off" 
+                        value="{{row[2]}}" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="tlp" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" id="tlp" placeholder="Please enter your phone number" name="tlp" autocomplete="off" 
+                        value="{{row[3]}}" required>
+                      </div>
+                      <div class="mb-3">
+                      <label for="tipe" class="form-label">Room Type</label>
+                      <select class="form-select" aria-label="Default select example" name="tipe">
+                        <option value="{{row[4]}}">{{row[4]}}</option>
+                        <option value="Deluxe Room">Deluxe Room</option>
+                        <option value="Twin Deluxe Room">Twin Deluxe Room</option>
+                        <option value="Family Room">Family Room</option>
+                        <option value="President Suite Room">President Suite Room</option>
+                      </select></div>
+                      <div class="mb-3">
+                        <label for="checkin" class="form-label">Check In</label>
+                        <input type="date" class="form-control" id="checkin"  name="checkin" value="{{row[5]}}" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="checkout" class="form-label">Check Out</label>
+                        <input type="date" class="form-control" id="checkout"  name="checkout" value="{{row[6]}}" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="tipe" class="form-label">Status</label>
+                        <select class="form-select" aria-label="Default select example" name="status">
+                          <option value="{{row[7]}}">{{row[7]}}</option>
+                          <option value="Confirm">Confirm</option>
+                          <option value="Booking">Booking</option>
+                          <option value="Leave">Leave</option>
+                        </select></div>
+                    </div>
+                </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>

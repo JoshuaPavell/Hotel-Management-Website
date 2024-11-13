@@ -1,0 +1,8 @@
+flask
+flask_mail
+werkzeug
+pdfkit
+wkhtmltopdf
+wtforms
+flask-mysqldb
+mysql-connector-python

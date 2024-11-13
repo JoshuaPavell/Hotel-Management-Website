@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Booking Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F8F9FA;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #ffc107;
+            margin-bottom: 20px;
+        }
+        .customer-info {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .customer-info h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .customer-info hr {
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        .customer-info p {
+            margin-bottom: 5px;
+        }
+        .back-button {
+            margin-top: 20px;
+        }
+        .back-button a {
+            color: #fff;
+            background-color: #ffc107;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .back-button a:hover {
+            background-color: #ffca33;
+        }
+    </style>
+</head>
+<body>
+    <div class="customer-info">
+      <h1>ANJOWIL HOTEL</h1>
+      <P>Your Perfect Paradise</P>
+        <h2>Hotel Booking Report</h2>
+        <hr>
+        <h2>Customer ID: {{ customer_data[0] }}</h2>
+        <p><strong>Customer Name:</strong> {{ customer_data[1] }}</p>
+        <p><strong>Email:</strong> {{ customer_data[2] }}</p>
+        <p><strong>Phone:</strong> {{ customer_data[3] }}</p>
+        <p><strong>Room Type:</strong> {{ customer_data[4] }}</p>
+        <p><strong>Check In:</strong> {{ customer_data[5] }}</p>
+        <p><strong>Check Out:</strong> {{ customer_data[6] }}</p>
+        <p><strong>Status:</strong> {{ customer_data[7] }}</p>
+    </div>
+</body>
+</html>

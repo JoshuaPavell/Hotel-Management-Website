@@ -1,0 +1,274 @@
+{% extends 'base.html' %}
+{% block title %} Menu Utama {% endblock %}
+
+{% block content %}
+
+<!-- home -->
+<div class="container" id="home">
+    <div class="row">
+        <div class="col mt-5">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item">
+                    <img src="{{url_for('static',filename='img/hotel_logo.jpg')}}" class="d-block w-100" alt="..." height="500">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>ANJOWIL Hotel</h5>
+                        <p>Your Perfect Paradise.</p>
+                      </div>
+                  </div>
+                  <div class="carousel-item active">
+                    <img src="{{url_for('static',filename='img/s1.jpg')}}" class="d-block w-100" alt="..." height="500">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Main Pool Area</h5>
+                        <p>The hotel's main swimming pool is on the 6th floor.</p>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{{url_for('static',filename='img/s2.jpeg')}}" class="d-block w-100" alt="..." height="500">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Hotel Outdoor Dining</h5>
+                        <p>Banquet venue for hotel guests or events.</p>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{{url_for('static',filename='img/s3.jpeg')}}" class="d-block w-100" alt="..." height="500">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second Pool Area</h5>
+                        <p>The hotel's second swimming pool is located on the 10th floor.</p>
+                      </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </div>
+</div>
+
+<!-- Welcome -->
+  <div class="container">
+      <div class="row">
+          <div class="col text-center mt-5">
+              <h4>Welcome to ANJOWIL hotel Bali</h4>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col text-center">
+              <p>Bali's premier 5-star business hotel with lifestyle products takes urban escapes to a whole new level, warmly welcoming you to the world of ANJOWIL hospitality.</p>
+          </div>
+      </div>
+  </div>
+  <br><br>
+
+  <!-- kamar -->
+  <div class="container" id="kamar">
+      <div class="row">
+          <div class="col text-center mb-3">
+              <h4>ROOM</h4>
+          </div>
+      </div>
+      <div class="row">
+
+        <!-- kamar 1 -->
+          <div class="col-sm">
+            <div class="card h-100">
+                <img src="{{url_for('static',filename='img/kmr.strd.jpg')}}" class="card-img-top" alt="...">
+                <h4><div class="cardheader">Deluxe Room<span class="float-end">Rp. 250.000,-</span>
+                </div></h4>
+                <div class="card-body">
+                  <p class="card-text">Deluxe features contemporary décor combined with selected modern furnishings. 
+                      Each room is equipped with carpet, high-speed internet access, minibar, hair dryer, satellite TV, IDD telephone service, electronic safe, 21″ Flat Screen TV, amenities and shower.</p>
+                      <div class="d-grid gap-2">
+                      <a href="#booking" class="btn btn-outline-info">Booking Now</a></div>
+                </div>
+              </div>
+          </div>
+
+          <!-- kamar 2 -->
+
+          <div class="col-sm">
+            <div class="card h-100">
+                <img src="{{url_for('static',filename='img/kmr.twin.jpg')}}" class="card-img-top" alt="...">
+                <h4><div class="cardheader">Twin Deluxe Room<span class="float-end">Rp. 450.000,-</span>
+                </div></h4>
+                <div class="card-body">
+                  <p class="card-text">Simple but rich with distinctive style and great quality. Each room is equipped with wall-to-wall carpeting, high-speed internet access, minibar, hair dryer, satellite TV, IDD telephone service, electronic safe, 21″ Flat Screen TV, sofa, amenities and shower.</p>
+                  <div class="d-grid gap-2">
+                    <a href="#booking" class="btn btn-outline-info">Booking Now</a></div>
+                </div>
+              </div>
+          </div>
+      </div>
+      <br>
+      <br>
+
+        <div class="row">
+          <!-- kamar 3 -->
+          <div class="col-sm">
+            <div class="card h-100">
+                <img src="{{url_for('static',filename='img/kmr.family.jpg')}}" class="card-img-top" alt="...">
+                <h4><div class="cardheader">Family Room<span class="float-end">Rp. 850.000,-</span>
+                </div></h4>
+                <div class="card-body">
+                  <p class="card-text">Enjoy the perfect blend of holidays in our family rooms which provide the ultimate in comfort and privacy, combined with a modern touch. Each Executive Suite has a separate living room area with comfortable sofa and coffee table, 37” Flat Screen TV, private bar and kitchen area, high speed internet access, minibar, hair dryer, satellite TV, 
+                      IDD telephone service, in-room electronic safe. , private amenities, and a set of bathtub and shower combo.</p>
+                      <div class="d-grid gap-2">
+                        <a href="#booking" class="btn btn-outline-info">Booking Now</a></div>
+                </div>
+              </div>
+          </div>
+
+          <!-- kamar 4 -->
+
+          <div class="col-sm">
+            <div class="card h-100">
+                <img src="{{url_for('static',filename='img/kmr.orkay.jpg')}}" class="card-img-top" alt="...">
+                <h4><div class="cardheader">President Suite Room<span class="float-end">Rp. 1.250.000,-</span>
+                </div></h4>
+                <div class="card-body">
+                  <p class="card-text">The President Suite is the perfect place to hide away from Jakarta's busy lifestyle or simply an excuse to enjoy the luxurious grandkemang service in this beautiful grand suite, equipped with a separate living area with comfortable sofas, coffee table, 3-Flat Screen TV, bar and private kitchen area, high speed internet access, minibar, hair dryer, satellite TV, 
+                      IDD telephone service, electronic safe, personal amenities, two sets of bathtub and shower combo, and private butler upon request.</p>
+                      <div class="d-grid gap-2">
+                        <a href="#booking" class="btn btn-outline-info">Booking Now</a></div>
+                </div>
+              </div>
+          </div>
+      </div>
+      <br>
+      <br>
+
+
+      <!-- fasilitas -->
+
+      <div class="container" id="fasilitas">
+          <div class="row">
+              <div class="col text-center mb-3">
+                  <h3>Facility</h3>
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col">
+                <div class="card h-100">
+                    <img src="{{url_for('static',filename='img/f1.jpg')}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Swimming Pool</h5>
+                      <p class="card-text">Visit our Lagoon Style Swimming Pool to enjoy a few hours of relaxation and a refreshing swim.
+                        Savor one of our Signature Cocktails at Pool Bar while waiting for the sun to set.</p>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100">
+                    <img src="{{url_for('static',filename='img/f2.jpeg')}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Gym</h5>
+                      <p class="card-text">Anjowil also offers a Gym for a healthy workout.
+                        A wide variety of exercise equipment is at hand to keep you in shape.</p>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100">
+                    <img src="{{url_for('static',filename='img/f3.jpg')}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Game spot</h5>
+                      <p class="card-text">unique place to play when you are bored.</p>
+                    </div>
+                  </div>
+              </div>
+          </div>
+
+          <br><br>
+
+          <div class="row">
+            <div class="col">
+              <div class="card h-100">
+                  <img src="{{url_for('static',filename='img/f4.jpg')}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Car parking</h5>
+                    <p class="card-text">Large parking area to park your car and maintain security.</p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                  <img src="{{url_for('static',filename='img/f5.jpg')}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">House Keeping</h5>
+                    <p class="card-text">The best service we provide will not disappoint you.</p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                  <img src="{{url_for('static',filename='img/f6.jpeg')}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Wifi</h5>
+                    <p class="card-text">Free internet service for all valued customers.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <br><br>
+
+      <!-- booking -->
+
+      <div class="container" id="booking">
+        <div class="row">
+          <div class="col text-center">
+            <h4>Form Booking Room</h4>
+          </div>
+        </div>
+        <br><br>
+        <form action="" method="POST">
+        <div class="col text-center">
+          <div class="mb-3">
+            <label for="nama" class="form-label">Booking Name</label>
+            <input type="text" class="form-control" id="nama" placeholder="Please enter your name" name="nama" autocomplete="off" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Please enter your email" name="email" autocomplete="off" required>
+          </div>
+          <div class="mb-3">
+            <label for="tlp" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="tlp" placeholder="Please enter your phone number" name="tlp" autocomplete="off" required>
+          </div>
+          <div class="mb-3">
+          <label for="tipe" class="form-label">Room Type</label>
+          <select class="form-select" aria-label="Default select example" name="tipe">
+            <option value="" selected disabled hidden>Choose the Room</option>
+            <option value="Deluxe Room">Deluxe Room</option>
+            <option value="Twin Deluxe Room">Twin Deluxe Room</option>
+            <option value="Family Room">Family Room</option>
+            <option value="President Suite Room">President Suite Room</option>
+          </select></div>
+          <div class="mb-3">
+            <label for="checkin" class="form-label">Check In</label>
+            <input type="date" class="form-control" id="checkin"  name="checkin" required>
+          </div>
+          <div class="mb-3">
+            <label for="checkout" class="form-label">Check Out</label>
+            <input type="date" class="form-control" id="checkout"  name="checkout" required>
+          </div>
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-success btn-lg btn-block" onclick="confirm('Are you sure?')">Booking Now</button>
+          </div>
+        </div>
+      </form>
+      </div>
+  </div>
+
+{% endblock %}

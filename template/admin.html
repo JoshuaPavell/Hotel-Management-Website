@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel Anjowil - Admin</title>
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    
+    <script type="text/javascript">
+      $(document).ready(function () {
+      $('#datacustomer').DataTable();
+      });
+    </script>
+  </head>
+  <body>
+      <!-- Mulai navbar -->
+    <header>
+      <nav id="navbar-example2" class="navbar navbar-light bg-warning px-3 fixed-top">
+        <a class="navbar-brand" href="#">ADMIN</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#kamar">Customer Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#fasilitas">Room Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#booking">Facility Data</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Admin</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#pengaturan">Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{{url_for('logout')}}">Log out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+      <!-- selesai navbar -->
+
+      <!-- isi -->
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        {% block content %}
+        <div class="container">
+            <div class="row">
+                <div class="col mt-5 text-center">
+                    <h2>Customer Data</h2>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <table class="table" id="datacustomer">
+                            <thead>
+                              <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">Customer Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Room Type</th>
+                                <th scope="col">Check in</th>
+                                <th scope="col">Check out</th>
+                                <th scope="col" style="text-align: center;">Status</th>
+                                <th scope="col" style="text-align: center;">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                {% for row in datapemesan %}
+                              <tr>
+                                <th scope="row">{{loop.index}}</th>
+                                <td>{{row[1]}}</td>
+                                <td>{{row[2]}}</td>
+                                <td>{{row[3]}}</td>
+                                <td>{{row[4]}}</td>
+                                <td>{{row[5]}}</td>
+                                <td>{{row[6]}}</td>
+                                <td>
+                                  {% if ( row[7] == "Booking" ): %} 
+                                  <a href="" type="button" class="btn btn-success">{{row[7]}}</a>
+                                  {% elif ( row[7] == "Leave" ): %}
+                                  <a href="" type="button" class="btn btn-danger">{{row[7]}}</a>
+                                  {% else :%}
+                                  <a href="" type="button" class="btn btn-primary">{{row[7]}}</a>
+                                  {% endif %}
+                                </td>
+                                <td>
+                                    <a href="" type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#detail{{row[0]}}">Detail</a>
+                                    <a href="" type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#update{{row[0]}}">Update</a>
+                                    <a href="{{ url_for('delete', id=row[0])}}" type="button" class="btn btn-outline-danger" onclick="confirm('Anda Yakin ?');">Delete</a>
+                                  </td>
+                              </tr>
+                              {% include "detail.html"%}
+                              {% include "update.html"%}
+                              {%endfor%}
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+      </div>
+      <!-- akhir isi -->
+
+      <footer class="bg-light text-center text-lg-start">
+        <div class="container">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col">
+            </div>
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2023 Copyright:
+          <a class="text-dark" href="">Andreas,Joshua,Wilson</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
